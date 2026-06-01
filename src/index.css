@@ -6,6 +6,7 @@
  */
 
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* Tell Tailwind where to scan for classes */
 @source "./**/*.{js,jsx,ts,tsx}";
@@ -42,3 +43,18 @@ html {
   background: #555;
 }
 */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
