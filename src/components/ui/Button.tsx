@@ -17,6 +17,7 @@ import React from 'react';
 type ButtonVariant = 'primary' | 'secondary' | 'outline';
 type ButtonSize = 'sm' | 'md' | 'lg';
 
+
 // Props interface dengan TypeScript
 interface ButtonProps {
   variant?: ButtonVariant;
@@ -49,13 +50,15 @@ const Button: React.FC<ButtonProps> = ({
   type = 'button',
 }) => {
   // Base styles yang selalu applied
-  const baseStyles = 'font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
+  const baseStyles = 'font-medium rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
 
   // Variant styles - SESUAIKAN dengan design Figma!
   const variantStyles = {
-    primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
-    secondary: 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500',
-    outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50 focus:ring-blue-500',
+    primary:
+      "bg-#FF623E shadow-[inset_4px_4px_8px_rgba(255,255,255,0.25),inset_0_-4px_8px_rgba(0,0,0,0.2),0_12px_24px_rgba(0,0,0,0.4)] text-white hover:bg-blue-700 focus:ring-blue-500",
+    secondary: "bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500",
+    outline:
+      "border-2 border-blue-600 text-blue-600 hover:bg-blue-50 focus:ring-blue-500",
   };
 
   // Size styles
